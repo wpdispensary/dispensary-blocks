@@ -5,7 +5,7 @@
  * Enqueue CSS/JS of all the blocks.
  *
  * @since   1.0.0
- * @package CGB
+ * @package WPDGB
  */
 
 // Exit if accessed directly.
@@ -20,18 +20,18 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-function wpd_blocks_cgb_block_assets() {
+function wpd_blocks_block_assets() {
 	// Styles.
 	wp_enqueue_style(
-		'wpd_blocks-cgb-style-css', // Handle.
+		'wpd-blocksstyle-css', // Handle.
 		plugins_url( 'dist/blocks.style.build.css', dirname( __FILE__ ) ), // Block style CSS.
 		array( 'wp-blocks' ) // Dependency to include the CSS after it.
 		// filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.style.build.css' ) // Version: filemtime — Gets file modification time.
 	);
-} // End function wpd_blocks_cgb_block_assets().
+} // End function wpd_blocks_block_assets().
 
 // Hook: Frontend assets.
-add_action( 'enqueue_block_assets', 'wpd_blocks_cgb_block_assets' );
+add_action( 'enqueue_block_assets', 'wpd_blocks_block_assets' );
 
 /**
  * Enqueue Gutenberg block assets for backend editor.
@@ -42,10 +42,10 @@ add_action( 'enqueue_block_assets', 'wpd_blocks_cgb_block_assets' );
  *
  * @since 1.0.0
  */
-function wpd_blocks_cgb_editor_assets() {
+function wpd_blocks_editor_assets() {
 	// Scripts.
 	wp_enqueue_script(
-		'wpd_blocks-cgb-block-js', // Handle.
+		'wpd_blocks-block-js', // Handle.
 		plugins_url( '/dist/blocks.build.js', dirname( __FILE__ ) ), // Block.build.js: We register the block here. Built with Webpack.
 		array( 'wp-blocks', 'wp-i18n', 'wp-element' ), // Dependencies, defined above.
 		// filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.build.js' ), // Version: filemtime — Gets file modification time.
@@ -54,12 +54,12 @@ function wpd_blocks_cgb_editor_assets() {
 
 	// Styles.
 	wp_enqueue_style(
-		'wpd_blocks-cgb-block-editor-css', // Handle.
+		'wpd_blocks-block-editor-css', // Handle.
 		plugins_url( 'dist/blocks.editor.build.css', dirname( __FILE__ ) ), // Block editor CSS.
 		array( 'wp-edit-blocks' ) // Dependency to include the CSS after it.
 		// filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.editor.build.css' ) // Version: filemtime — Gets file modification time.
 	);
-} // End function wpd_blocks_cgb_editor_assets().
+} // End function wpd_blocks_editor_assets().
 
 // Hook: Editor assets.
-add_action( 'enqueue_block_editor_assets', 'wpd_blocks_cgb_editor_assets' );
+add_action( 'enqueue_block_editor_assets', 'wpd_blocks_editor_assets' );
