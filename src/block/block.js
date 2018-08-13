@@ -28,7 +28,7 @@ const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.b
 registerBlockType( 'wpdispensary/wpd-blocks', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
 	title: __( 'WP Dispensary' ), // Block title.
-	icon: 'shield', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
+	icon: 'dashicons-grid-view', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
 	category: 'common', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 	keywords: [
 		__( 'dispensary' ),
@@ -48,9 +48,9 @@ registerBlockType( 'wpdispensary/wpd-blocks', {
 		// Creates a <p class='wp-block-cgb-block-wpd-blocks'></p>.
 		return (
 			<div className={ props.className }>
-				<p>— Hello from the backend.</p>
+				<p>— WP Dispensary Menu.</p>
 				<p>
-					CGB BLOCK: <code>wpd-blocks</code> is a new Gutenberg block
+					WPD BLOCKS: <code>wpd-blocks</code> is a new Gutenberg block
 				</p>
 				<p>
 					It was created via{ ' ' }
@@ -75,9 +75,9 @@ registerBlockType( 'wpdispensary/wpd-blocks', {
 	save: function( props ) {
 		return (
 			<div>
-				<p>— Hello from the frontend.</p>
+				<p>— WP Dispensary Menu.</p>
 				<p>
-					CGB BLOCK: <code>wpd-blocks</code> is a new Gutenberg block.
+					WPD BLOCKS: <code>wpd-blocks</code> is a new Gutenberg block.
 				</p>
 				<p>
 					It was created via{ ' ' }
