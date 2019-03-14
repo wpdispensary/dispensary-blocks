@@ -1,0 +1,378 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: WP Dispensary's Product Blocks\n"
+"POT-Creation-Date: 2019-03-12 22:00-0400\n"
+"PO-Revision-Date: 2019-03-12 21:57-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: dispensary-blocks.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: dist/getting-started/getting-started.php:49
+#: dist/getting-started/getting-started.php:50
+#: dist/getting-started/getting-started.php:110
+msgid "Dispensary Blocks"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:109
+#: dist/getting-started/getting-started.php:333
+msgid "Visit Dispensary Blocks"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:110
+msgid "Getting started with"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:114
+msgid "Getting Started"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:115
+msgid "Plugin Help File"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:117
+msgid "Theme Help File"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:128
+msgid ""
+"Welcome to the future of site building with Gutenberg and Dispensary Blocks!"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:129
+msgid ""
+"The Dispensary Blocks collection is now ready to use in your posts and "
+"pages. Simply search for \"dispensary\" or \"ab\" in the block inserter to "
+"display the Dispensary Blocks collection. Check out the help file link above "
+"for detailed instructions!"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:134
+msgid "Dispensary Blocks Theme"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:141
+msgid "Available Dispensary Blocks"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:142
+msgid ""
+"The following blocks are available in Dispensary Blocks. More blocks are on "
+"the way so stay tuned!"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:148
+msgid "Post Grid Block"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:149
+#: dist/getting-started/getting-started.php:165
+msgid ""
+"Add an eye-catching, full-width section with a big title, paragraph text, "
+"and a customizable button."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:156
+msgid "Container Block"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:157
+msgid ""
+"Wrap several blocks into a section and add padding, margins, background "
+"colors and images."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:162
+msgid "Call To Action Block"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:164
+msgid "Call-To-Action Block"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:170
+msgid "Testimonials Block"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:172
+msgid "Testimonial Block"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:173
+msgid ""
+"Add a customer or client testimonial to your site with an avatar, text, "
+"citation and more."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:178
+msgid "Inline Notices Block"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:180
+msgid "Inline Notice Block"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:181
+msgid ""
+"Add a colorful notice or message to your site with text, a title and a "
+"dismiss icon."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:186
+#: dist/getting-started/getting-started.php:188
+msgid "Sharing Icons Block"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:189
+msgid ""
+"Add social sharing icons to your page with size, shape, color and style "
+"options."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:194
+#: dist/getting-started/getting-started.php:196
+msgid "Author Profile Block"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:197
+msgid ""
+"Add a user profile box to your site with a title, bio info, an avatar and "
+"social media links."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:202
+msgid "Accordion Toggle"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:204
+msgid "Accordion Block"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:205
+msgid ""
+"Add an accordion text toggle with a title and descriptive text. Includes "
+"font size and toggle options."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:210
+msgid "Customizable Button Block"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:212
+msgid "Customizable Button"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:213
+msgid ""
+"Add a fancy stylized button to your post or page with size, shape, target, "
+"and color options."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:218
+#: dist/getting-started/getting-started.php:220
+msgid "Drop Cap Block"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:221
+msgid ""
+"Add a stylized drop cap to the beginning of your paragraph. Choose from "
+"three different styles."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:226
+msgid "Spacer and Divider Block"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:228
+msgid "Spacer & Divider"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:229
+msgid ""
+"Add an adjustable spacer between your blocks with an optional divider with "
+"styling options."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:249
+#: dist/getting-started/getting-started.php:272
+msgid ""
+"This help file feed seems to be temporarily down. You can always view the "
+"help file on the Dispensary Blocks site in the meantime."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:288
+msgid "Quick Start Checklist"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:293
+msgid "1. Install the Gutenberg plugin."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:294
+msgid ""
+"Gutenberg adds the new block-based editor to WordPress. You will need this "
+"to work with the Dispensary Blocks plugin."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:297
+msgid "Install Gutenberg now"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:300
+#: dist/getting-started/getting-started.php:302
+#: dist/getting-started/getting-started.php:314
+#: dist/getting-started/getting-started.php:316
+msgid "Plugin activated!"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:307
+msgid "2. Install the Dispensary Blocks plugin."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:308
+msgid ""
+"Dispensary Blocks adds several handy content blocks to the Gutenberg block "
+"editor."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:311
+msgid "Install Dispensary Blocks now"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:328
+msgid "Free Theme Download"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:335
+msgid ""
+"Download our FREE Dispensary Blocks theme to help you get started with the "
+"Dispensary Blocks plugin and the new WordPress block editor."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:337
+msgid "Install Now"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:347
+msgid "Stay Updated"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:352
+#: dist/getting-started/getting-started.php:383
+msgid ""
+"Join the newsletter to receive emails when we add new blocks, release plugin "
+"and theme updates, send out free resources, and more!"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:354
+msgid "Subscribe Now"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:363
+msgid "Free Blocks & Tutorials"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:368
+#: dist/getting-started/getting-started.php:390
+msgid ""
+"Check out the Dispensary Blocks site to find block editor tutorials, free "
+"blocks and updates about the Dispensary Blocks plugin and theme!"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:369
+msgid "Visit DispensaryBlocks.com"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:377
+msgid "Free Blocks and Resources"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:382
+msgid "Blocks In Your Inbox"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:384
+msgid "Subscribe Today"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:389
+msgid "Articles & Tutorials"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:391
+msgid "Visit the Blog"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:396
+msgid "Gutenberg News"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:397
+msgid ""
+"Stay up to date with the new WordPress editor. Gutenberg News curates "
+"Gutenberg articles, tutorials, videos and more free resources."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:398
+msgid "Visit Gutenberg News"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:403
+#, php-format
+msgid "Made by the fine folks at %1$s and %2$s."
+msgstr ""
+
+#: dist/getting-started/getting-started.php:405
+msgid "WP Dispensary"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:406
+msgid "Blog"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:407
+msgid "Docs"
+msgstr ""
+
+#: dist/getting-started/getting-started.php:408
+msgid "Twitter"
+msgstr ""
+
+#: dist/init.php:103
+msgid "Dispensary Blocks"
+msgstr ""
+
+#: src/blocks/block-post-grid/index.php:70
+msgid "Untitled"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WP Dispensary's Product Blocks"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://www.wpdispensary.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Display your products with the new Gutenberg editor for WordPress"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "wpdispensary, deviodigital"
+msgstr ""
