@@ -9,15 +9,15 @@ Requires PHP: 5.2.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Product blocks for WP Dispensary
+WP Dispensary Product Blocks for Gutenberg
 
 == Description ==
-
-Custom product blocks for WP Dispensary.
 
 Welcome to the future of cannabis website design with WP Dispensary's Product Blocks for Gutenberg!
 
 The Dispensary Blocks collection makes it a breeze to add and style your marijuana menu. Simply search for "dispensary" or "products" in the block inserter to display Dispensary Blocks.
+
+**Please Note:** This plugin requires both WordPress 5.0+ and [WP Dispensary](https://www.wordpress.org/plugins/wp-dispensary) to be installed and activated in order for it to work.
 
 == Installation ==
 
