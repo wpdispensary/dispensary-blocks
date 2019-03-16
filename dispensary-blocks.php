@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name: WP Dispensary's Product Blocks
- * Plugin URI: https://www.wpdispensary.com
- * Description: Display your products with the new Gutenberg editor for WordPress
+ * Plugin URI: https://www.wpdispensary.com/product-blocks-for-gutenberg/
+ * Description: Display your WP Dispensary products with the new Gutenberg editor for WordPress
  * Author: wpdispensary, deviodigital
- * Author URI: https://www.wpdispensary.com
+ * Author URI: https://www.wpdispensary.com/
  * Version: 1.0
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -12,14 +12,12 @@
  * @package DISPENSARY BLOCKS
  */
 
-
 /**
  * Exit if accessed directly
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
 
 /**
  * Initialize the blocks
@@ -72,7 +70,7 @@ register_activation_hook( __FILE__, 'dispensary_blocks_activate' );
 function dispensary_blocks_redirect() {
     if ( get_option( 'dispensary_blocks_do_activation_redirect', false ) ) {
         delete_option( 'dispensary_blocks_do_activation_redirect' );
-        if( !isset( $_GET['activate-multi'] ) ) {
+        if ( ! isset( $_GET['activate-multi'] ) ) {
             wp_redirect( "admin.php?page=dispensary-blocks" );
         }
     }
