@@ -1,73 +1,91 @@
 <?php
 /**
- * Server-side rendering for the post grid block
+ * Server-side rendering for the products block
  *
- * @since 	1.1.7
+ * @since 	1.0.0
  * @package Dispensary Blocks
  */
 
 /**
- * Renders the post grid block on server.
+ * Renders the products block on server.
  */
-function dispensary_blocks_render_block_core_latest_posts( $attributes ) {
+function dispensary_blocks_render_block_core_latest_concentrates( $attributes ) {
 
+	// Get categories (if any).
 	$categories = isset( $attributes['categories'] ) ? $attributes['categories'] : '';
 
-	$recent_posts = wp_get_recent_posts( array(
-		'post_type'   => 'flowers',
-		'numberposts' => $attributes['postsToShow'],
-		'post_status' => 'publish',
-		'order'       => $attributes['order'],
-		'orderby'     => $attributes['orderBy'],
-		'category'    => $categories,
+	// Create empty tax query.
+	$tax_query = array();
+
+	// Add categories to tax query.
+	if ( '' !== $categories ) {
+		$tax_query[] = array(
+			'taxonomy' => 'concentrates_category',
+			'field'    => 'term_id',
+			'terms'    => $categories
+		);
+	}
+
+	// Get products.
+	$recent_products = wp_get_recent_posts( array(
+		'post_status'      => 'publish',
+		'post_type'        => 'concentrates',
+		'numberposts'      => $attributes['postsToShow'],
+		'order'            => $attributes['order'],
+		'orderby'          => $attributes['orderBy'],
+		'tax_query'        => $tax_query
 	), 'OBJECT' );
 
+	// Start item markup.
 	$list_items_markup = '';
 
-	if ( $recent_posts ) {
-		foreach ( $recent_posts as $post ) {
-			// Get the post ID
-			$post_id = $post->ID;
+	// Recent products check.
+	if ( $recent_products ) {
+		// Product loop
+		foreach ( $recent_products as $product ) {
+			// Get the post ID.
+			$product_id = $product->ID;
 
-			// Get the post thumbnail
-			$post_thumb_id = get_post_thumbnail_id( $post_id );
+			// Get the post thumbnail.
+			$product_thumb_id = get_post_thumbnail_id( $product_id );
 
-			if ( $post_thumb_id && isset( $attributes['displayProductImage'] ) && $attributes['displayProductImage'] ) {
-				$post_thumb_class = 'has-thumb';
+			// Add has-thumb class if there's a thumbnail image.
+			if ( $product_thumb_id && isset( $attributes['displayProductImage'] ) && $attributes['displayProductImage'] ) {
+				$product_thumb_class = 'has-thumb';
 			} else {
-				$post_thumb_class = 'no-thumb';
+				$product_thumb_class = 'no-thumb';
 			}
 
 			// Start the markup for the post
 			$list_items_markup .= sprintf(
 				'<article class="%1$s">',
-				esc_attr( $post_thumb_class )
+				esc_attr( $product_thumb_class )
 			);
 
 			$list_items_markup .= do_action( 'wpd_shortcode_inside_top' );
 
 			// Get the featured image
-			if ( isset( $attributes['displayProductImage'] ) && $attributes['displayProductImage'] && $post_thumb_id ) {
+			if ( isset( $attributes['displayProductImage'] ) && $attributes['displayProductImage'] && $product_thumb_id ) {
 				if ( 'landscape' === $attributes['imageCrop'] ) {
-					$post_thumb_size = 'dispensary-image';
+					$product_thumb_size = 'dispensary-image';
 				} else {
-					$post_thumb_size = 'wpd-small';
+					$product_thumb_size = 'wpd-small';
 				}
 
 				$list_items_markup .= sprintf(
 					'<div class="wpd-block-product-grid-image"><a href="%1$s" rel="bookmark">%2$s</a></div>',
-					esc_url( get_permalink( $post_id ) ),
-					wp_get_attachment_image( $post_thumb_id, $post_thumb_size )
+					esc_url( get_permalink( $product_id ) ),
+					get_wpd_product_image( $product_id, $product_thumb_size )
 				);
 			}
 
-			// Wrap the text content
+			// Wrap the text content.
 			$list_items_markup .= sprintf(
 				'<div class="wpd-block-product-grid-text">'
 			);
 
-				// Get the post title
-				$title = get_the_title( $post_id );
+				// Get the product title.
+				$title = get_the_title( $product_id );
 
 				if ( ! $title ) {
 					$title = __( 'Products', 'dispensary-blocks' );
@@ -76,7 +94,7 @@ function dispensary_blocks_render_block_core_latest_posts( $attributes ) {
 				if ( isset( $attributes['displayProductTitle'] ) && $attributes['displayProductTitle'] ) {
 					$list_items_markup .= sprintf(
 						'<h2 class="wpd-block-product-grid-title"><a href="%1$s" rel="bookmark">%2$s</a></h2>',
-						esc_url( get_permalink( $post_id ) ),
+						esc_url( get_permalink( $product_id ) ),
 						esc_html( $title )
 					);
 				}
@@ -90,7 +108,7 @@ function dispensary_blocks_render_block_core_latest_posts( $attributes ) {
 					if ( isset( $attributes['displayProductPrice'] ) && $attributes['displayProductPrice'] ) {
 						$list_items_markup .= sprintf(
 							'<div class="wpd-block-product-grid-author">%1$s</div>',
-							get_wpd_all_prices_simple( $post_id, TRUE )
+							get_wpd_all_prices_simple( $product_id, TRUE )
 						);
 					}
 
@@ -112,10 +130,10 @@ function dispensary_blocks_render_block_core_latest_posts( $attributes ) {
 
 					// Product Details.
 					if ( isset( $attributes['displayProductDetails'] ) && $attributes['displayProductDetails'] ) {
-						$list_items_markup .= get_wpd_product_details( $post_id, $product_details );
+						$list_items_markup .= get_wpd_product_details( $product_id, $product_details );
 					}
 
-					//var_dump( wpd_product_details( $post_id, $product_details ) );
+					//var_dump( wpd_product_details( $product_id, $product_details ) );
 
 				// Close the byline content
 				$list_items_markup .= sprintf(
@@ -128,26 +146,14 @@ function dispensary_blocks_render_block_core_latest_posts( $attributes ) {
 				);
 
 					// Get the excerpt
-					$excerpt = apply_filters( 'the_excerpt', get_post_field( 'post_excerpt', $post_id, 'display' ) );
+					$excerpt = apply_filters( 'the_excerpt', get_post_field( 'post_excerpt', $product_id, 'display' ) );
 
 					if ( empty( $excerpt ) ) {
-						$excerpt = apply_filters( 'the_excerpt', wp_trim_words( $post->post_content, 55 ) );
+						$excerpt = apply_filters( 'the_excerpt', wp_trim_words( $product->post_content, 55 ) );
 					}
 
 					if ( ! $excerpt ) {
 						$excerpt = null;
-					}
-
-					if ( isset( $attributes['displayProductExcerpt'] ) && $attributes['displayProductExcerpt'] ) {
-						$list_items_markup .=  wp_kses_post( $excerpt );
-					}
-
-					if ( isset( $attributes['displayProductLink'] ) && $attributes['displayProductLink'] ) {
-						$list_items_markup .= sprintf(
-							'<p><a class="wpd-block-product-grid-link wpd-text-link" href="%1$s" rel="bookmark">%2$s</a></p>',
-							esc_url( get_permalink( $post_id ) ),
-							esc_html( $attributes['readMoreText'] )
-						);
 					}
 
 				// Close the excerpt content
@@ -155,7 +161,10 @@ function dispensary_blocks_render_block_core_latest_posts( $attributes ) {
 					'</div>'
 				);
 
-				$list_items_markup .= get_wpd_ecommerce_product_buttons( $post_id );
+				// Display eCommerce product buttons.
+				if ( function_exists( 'get_wpd_ecommerce_product_buttons' ) ) {
+					$list_items_markup .= get_wpd_ecommerce_product_buttons( $product_id );
+				}
 
 			// Wrap the text content
 			$list_items_markup .= sprintf(
@@ -200,14 +209,14 @@ function dispensary_blocks_render_block_core_latest_posts( $attributes ) {
 /**
  * Registers the `core/latest-posts` block on server.
  */
-function dispensary_blocks_register_block_core_latest_posts() {
+function dispensary_blocks_register_block_core_latest_concentrates() {
 
 	// Check if the register function exists
 	if ( ! function_exists( 'register_block_type' ) ) {
 		return;
 	}
 
-	register_block_type( 'dispensary-blocks/wpd-product-grid', array(
+	register_block_type( 'dispensary-blocks/wpd-concentrates-grid', array(
 		'attributes' => array(
 			'categories' => array(
 				'type' => 'string',
@@ -216,83 +225,78 @@ function dispensary_blocks_register_block_core_latest_posts() {
 				'type' => 'string',
 			),
 			'postsToShow' => array(
-				'type' => 'number',
-				'default' => 6,
+				'type'    => 'number',
+				'default' => 9,
 			),
 			'displayProductDetails' => array(
-				'type' => 'boolean',
+				'type'    => 'boolean',
 				'default' => true,
 			),
 			'displayProductExcerpt' => array(
-				'type' => 'boolean',
+				'type'    => 'boolean',
 				'default' => true,
 			),
 			'displayProductPrice' => array(
-				'type' => 'boolean',
+				'type'    => 'boolean',
 				'default' => true,
 			),
 			'displayProductImage' => array(
-				'type' => 'boolean',
+				'type'    => 'boolean',
 				'default' => true,
 			),
 			'displayProductLink' => array(
-				'type' => 'boolean',
+				'type'    => 'boolean',
 				'default' => true,
 			),
 			'displayProductTitle' => array(
-				'type' => 'boolean',
+				'type'    => 'boolean',
 				'default' => true,
 			),
 			'postLayout' => array(
-				'type' => 'string',
+				'type'    => 'string',
 				'default' => 'grid',
 			),
 			'columns' => array(
-				'type' => 'number',
+				'type'    => 'number',
 				'default' => 2,
 			),
 			'align' => array(
-				'type' => 'string',
+				'type'    => 'string',
 				'default' => 'center',
 			),
 			'width' => array(
-				'type' => 'string',
+				'type'    => 'string',
 				'default' => 'wide',
 			),
 			'order' => array(
-				'type' => 'string',
+				'type'    => 'string',
 				'default' => 'desc',
 			),
-			'orderBy'  => array(
-				'type' => 'string',
+			'orderBy' => array(
+				'type'    => 'string',
 				'default' => 'date',
 			),
-			'imageCrop'  => array(
-				'type' => 'string',
-				'default' => 'landscape',
-			),
-			'readMoreText'  => array(
-				'type' => 'string',
-				'default' => 'Continue Reading',
+			'imageCrop' => array(
+				'type'    => 'string',
+				'default' => 'square',
 			),
 		),
-		'render_callback' => 'dispensary_blocks_render_block_core_latest_posts',
+		'render_callback' => 'dispensary_blocks_render_block_core_latest_concentrates',
 	) );
 }
 
-add_action( 'init', 'dispensary_blocks_register_block_core_latest_posts' );
-
+add_action( 'init', 'dispensary_blocks_register_block_core_latest_concentrates' );
 
 /**
  * Create API fields for additional info
  */
-function dispensary_blocks_register_rest_fields() {
+function dispensary_blocks_register_concentrates_rest_fields() {
 	// Add landscape featured image source
 	register_rest_field(
 		'post',
 		'featured_image_src',
 		array(
-			'get_callback'    => 'dispensary_blocks_get_image_src_landscape',
+			'get_callback'    => 'dispensary_blocks_get_concentrates_image_src_landscape',
 			'update_callback' => null,
 			'schema'          => null,
 		)
@@ -303,33 +307,23 @@ function dispensary_blocks_register_rest_fields() {
 		'post',
 		'featured_image_src_square',
 		array(
-			'get_callback'    => 'dispensary_blocks_get_image_src_square',
+			'get_callback'    => 'dispensary_blocks_get_concentrates_image_src_square',
 			'update_callback' => null,
 			'schema'          => null,
 		)
 	);
 
-	// Add author info
-	register_rest_field(
-		'post',
-		'author_info',
-		array(
-			'get_callback'    => 'dispensary_blocks_get_author_info',
-			'update_callback' => null,
-			'schema'          => null,
-		)
-	);
 }
-add_action( 'rest_api_init', 'dispensary_blocks_register_rest_fields' );
+add_action( 'rest_api_init', 'dispensary_blocks_register_concentrates_rest_fields' );
 
 
 /**
  * Get landscape featured image source for the rest field
  */
-function dispensary_blocks_get_image_src_landscape( $object, $field_name, $request ) {
+function dispensary_blocks_get_concentrates_image_src_landscape( $object, $field_name, $request ) {
 	$feat_img_array = wp_get_attachment_image_src(
 		$object['featured_media'],
-		'wpd-small',
+		'dispensary-image',
 		false
 	);
 	return $feat_img_array[0];
@@ -338,25 +332,11 @@ function dispensary_blocks_get_image_src_landscape( $object, $field_name, $reque
 /**
  * Get square featured image source for the rest field
  */
-function dispensary_blocks_get_image_src_square( $object, $field_name, $request ) {
+function dispensary_blocks_get_concentrates_image_src_square( $object, $field_name, $request ) {
 	$feat_img_array = wp_get_attachment_image_src(
 		$object['featured_media'],
 		'wpd-small',
 		false
 	);
 	return $feat_img_array[0];
-}
-
-/**
- * Get author info for the rest field
- */
-function dispensary_blocks_get_author_info( $object, $field_name, $request ) {
-	// Get the author name
-	$author_data['display_name'] = get_the_author_meta( 'display_name', $object['author'] );
-
-	// Get the author link
-	$author_data['author_link'] = get_author_posts_url( $object['author'] );
-
-	// Return the author data
-	return $author_data;
 }

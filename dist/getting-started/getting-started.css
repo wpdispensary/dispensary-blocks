@@ -1,3 +1,7 @@
+body.wp-dispensary_page_dispensary-blocks #wpcontent {
+    padding-left: 0;
+}
+
 .clearfix:before, .clearfix:after {
     content: "";
     display: table;
@@ -20,6 +24,11 @@
 .wpd-getting-started {
 	overflow: hidden;
 	margin: 0;
+}
+
+img.wpd-icon {
+	width: 20px;
+	height: auto;
 }
 
 .wpd-getting-started .panel-right .theme-image {
@@ -255,8 +264,9 @@
 
 .wpd-getting-started .intro-wrap {
 	padding:  4% 0 0 0;
-	background: #5a3fd6 url("geo.png");
-  	background-size: 1400px;
+	background: #333 url('background.jpg') no-repeat bottom center;
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 .wpd-getting-started .intro {
@@ -313,7 +323,7 @@
 	display: inline-block;
 	width: 100%;
 	margin: 0;
-	background: #5a3fd6;
+	background: transparent;
 	padding: 0 50px;
 }
 
@@ -358,7 +368,7 @@
 	box-shadow: none;
 	border-top-right-radius: 3px;
 	border-top-left-radius: 3px;
-	color: #5d45c9;
+	color: #76bd43;
 }
 
 .wpd-getting-started .inline-list li a i {
@@ -604,7 +614,7 @@
 .wpd-getting-started .button-primary.hover,
 .wpd-getting-started .button-primary:focus,
 .wpd-getting-started .button-primary:hover {
-	background: #5d45c9;
+	background: #76bd43;
 	border-color: #4c35b9;
 	box-shadow: none;
 	transition: .3s ease;
@@ -623,7 +633,7 @@
 .wpd-getting-started a,
 .wpd-getting-started a:active,
 .wpd-getting-started a:hover {
-	color: #5d45c9;
+	color: #76bd43;
 }
 
 .wpd-getting-started .panel-wpd-plugin .panel-club-inside {
@@ -730,7 +740,7 @@
 }
 
 .wpd-block-footer-column i {
-	color: #5d45c9;
+	color: #76bd43;
 	font-size: 40px;
 	margin-bottom: 10px;
 }
@@ -759,7 +769,7 @@
 	vertical-align: initial !important;
 	border-top-width: 1px !important;
 	color: #fff;
-	background: #5d45c9;
+	background: #76bd43;
 }
 
 .visit-title {

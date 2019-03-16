@@ -100,7 +100,7 @@ add_filter( 'block_categories', function( $categories, $post ) {
 		array(
 			array(
 				'slug' => 'dispensary-blocks',
-				'title' => __( 'Dispensary Blocks', 'dispensary-blocks' ),
+				'title' => __( 'WP Dispensary', 'dispensary-blocks' ),
 			),
 		)
 	);

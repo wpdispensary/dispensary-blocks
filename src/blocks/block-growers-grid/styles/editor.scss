@@ -1,0 +1,29 @@
+/**
+ * Editor styles for the admin
+ */
+
+.wpd-block-product-grid {
+    h2 a {
+        text-decoration: none;
+    }
+}
+
+.wpd-block-product-grid-text h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.wpd-block-product-grid-byline span span.wpd-productinfo {
+    margin-right: 10px;
+}
+
+.is-list .wpd-block-product-grid-text h2 {
+    font-size: 28px;
+}
+
+.wpd-block-product-grid .is-grid.columns-4 .wpd-block-product-grid-byline span span.wpd-productinfo.pricing,
+.wpd-block-product-grid .is-grid.columns-5 .wpd-block-product-grid-byline span span.wpd-productinfo.pricing {
+    display: block;
+}

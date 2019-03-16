@@ -2,7 +2,7 @@
 Contributors: wpdispensary, deviodigital
 Donate link: https://www.wpdispensary.com
 Tags: blocks, editor, gutenberg, dispensary, cannabis
-Requires at least: 4.7
+Requires at least: 5.0
 Tested up to: 5.1
 Stable tag: 1.0
 Requires PHP: 5.2.4
@@ -14,6 +14,10 @@ Product blocks for WP Dispensary
 == Description ==
 
 Custom product blocks for WP Dispensary.
+
+Welcome to the future of cannabis website design with WP Dispensary's Product Blocks for Gutenberg!
+
+The Dispensary Blocks collection makes it a breeze to add and style your marijuana menu. Simply search for "dispensary" or "products" in the block inserter to display Dispensary Blocks.
 
 == Installation ==
 

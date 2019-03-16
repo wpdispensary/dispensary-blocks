@@ -47,35 +47,13 @@ class WPDProductsBlock extends Component {
 	constructor() {
 		super( ...arguments );
 
-		this.toggleDisplayProductPrice = this.toggleDisplayProductPrice.bind( this );
-		this.toggleDisplayProductImage = this.toggleDisplayProductImage.bind( this );
-		this.toggleDisplayProductDetails = this.toggleDisplayProductDetails.bind( this );
-		this.toggleDisplayProductExcerpt = this.toggleDisplayProductExcerpt.bind( this );
-		this.toggleDisplayProductLink = this.toggleDisplayProductLink.bind( this );
 		this.toggleDisplayProductTitle = this.toggleDisplayProductTitle.bind( this );
+		this.toggleDisplayProductImage = this.toggleDisplayProductImage.bind( this );
+		this.toggleDisplayProductPrice = this.toggleDisplayProductPrice.bind( this );
+		this.toggleDisplayProductDetails = this.toggleDisplayProductDetails.bind( this );
 	}
 
-	toggleDisplayProductDetails() {
-		const { displayProductDetails } = this.props.attributes;
-		const { setAttributes } = this.props;
-
-		setAttributes( { displayProductDetails: ! displayProductDetails } );
-	}
-
-	toggleDisplayProductExcerpt() {
-		const { displayProductExcerpt } = this.props.attributes;
-		const { setAttributes } = this.props;
-
-		setAttributes( { displayProductExcerpt: ! displayProductExcerpt } );
-	}
-
-	toggleDisplayProductPrice() {
-		const { displayProductPrice } = this.props.attributes;
-		const { setAttributes } = this.props;
-
-		setAttributes( { displayProductPrice: ! displayProductPrice } );
-	}
-
+	// Product image toggle.
 	toggleDisplayProductImage() {
 		const { displayProductImage } = this.props.attributes;
 		const { setAttributes } = this.props;
@@ -83,13 +61,7 @@ class WPDProductsBlock extends Component {
 		setAttributes( { displayProductImage: ! displayProductImage } );
 	}
 
-	toggleDisplayProductLink() {
-		const { displayProductLink } = this.props.attributes;
-		const { setAttributes } = this.props;
-
-		setAttributes( { displayProductLink: ! displayProductLink } );
-	}
-
+	// Product title toggle.
 	toggleDisplayProductTitle() {
 		const { displayProductTitle } = this.props.attributes;
 		const { setAttributes } = this.props;
@@ -97,11 +69,20 @@ class WPDProductsBlock extends Component {
 		setAttributes( { displayProductTitle: ! displayProductTitle } );
 	}
 
-	customizeReadMoreText() {
-		const { readMoreText } = this.props.attributes;
+	// Product prices toggle.
+	toggleDisplayProductPrice() {
+		const { displayProductPrice } = this.props.attributes;
 		const { setAttributes } = this.props;
 
-		setAttributes( { readMoreText: ! readMoreText } );
+		setAttributes( { displayProductPrice: ! displayProductPrice } );
+	}
+
+	// Product details toggle.
+	toggleDisplayProductDetails() {
+		const { displayProductDetails } = this.props.attributes;
+		const { setAttributes } = this.props;
+
+		setAttributes( { displayProductDetails: ! displayProductDetails } );
 	}
 
 	render() {
@@ -118,7 +99,7 @@ class WPDProductsBlock extends Component {
 
 		const inspectorControls = (
 			<InspectorControls>
-				<PanelBody title={ __( 'Product Grid Settings' ) }>
+				<PanelBody title={ __( 'Block Settings' ) }>
 					<QueryControls
 						{ ...{ order, orderBy } }
 						numberOfItems={ postsToShow }
@@ -177,7 +158,7 @@ class WPDProductsBlock extends Component {
 					{ inspectorControls }
 					<Placeholder
 						icon="grid-view"
-						label={ __( 'WP Dispensary Product Grid' ) }
+						label={ __( 'WP Dispensary Products' ) }
 					>
 						{ ! Array.isArray( latestProducts ) ?
 							<Spinner /> :
@@ -245,12 +226,10 @@ class WPDProductsBlock extends Component {
 								{
 									displayProductImage && product.featured_image_small !== undefined && product.featured_image_small ? (
 										<div className="wpd-block-product-grid-image">
-											<a href={ product.link } target="_blank" rel="bookmark">
-												<img
-													src={ isLandscape ? product.featured_image_small : product.featured_image_small }
-													alt={ decodeEntities( product.title.rendered.trim() ) || __( '(Untitled)' ) }
-												/>
-											</a>
+											<img
+												src={ isLandscape ? product.featured_image_default : product.featured_image_small }
+												alt={ decodeEntities( product.title.rendered.trim() ) || __( '(Untitled)' ) }
+											/>
 										</div>
 									) : (
 										null
@@ -285,7 +264,7 @@ export default withSelect( ( select, props ) => {
 	const { postsToShow, order, orderBy, categories } = props.attributes;
 	const { getEntityRecords } = select( 'core' );
 	const latestProductsQuery = pickBy( {
-		categories,
+		flowers_category: categories,
 		order,
 		orderby: orderBy,
 		per_page: postsToShow,

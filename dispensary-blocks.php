@@ -36,9 +36,14 @@ function dispensary_blocks_loader() {
 	require_once plugin_dir_path( __FILE__ ) . 'dist/getting-started/getting-started.php';
 
 	/**
-	 * Load Post Grid PHP
+	 * Load Product Grids PHP
 	 */
-	require_once plugin_dir_path( __FILE__ ) . 'src/blocks/block-post-grid/index.php';
+	require_once plugin_dir_path( __FILE__ ) . 'src/blocks/block-flowers-grid/index.php';
+	require_once plugin_dir_path( __FILE__ ) . 'src/blocks/block-concentrates-grid/index.php';
+	require_once plugin_dir_path( __FILE__ ) . 'src/blocks/block-edibles-grid/index.php';
+	require_once plugin_dir_path( __FILE__ ) . 'src/blocks/block-prerolls-grid/index.php';
+	require_once plugin_dir_path( __FILE__ ) . 'src/blocks/block-topicals-grid/index.php';
+	require_once plugin_dir_path( __FILE__ ) . 'src/blocks/block-growers-grid/index.php';
 }
 add_action( 'plugins_loaded', 'dispensary_blocks_loader' );
 

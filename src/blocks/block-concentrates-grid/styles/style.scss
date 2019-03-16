@@ -36,7 +36,11 @@
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 
-	div[class*="columns"].is-grid {
+	.is-grid.columns-5 {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+
+	.is-grid {
 		@media only screen and (max-width: 600px) {
 			grid-template-columns: 1fr;
 		}
@@ -155,6 +159,10 @@
 		margin-top: 15px;
 	}
 
+	.is-grid.columns-2 span.wpd-productinfo {
+		font-size: 15px;
+	}
+
 	.is-list {
 		article {
 			display: grid;
@@ -182,6 +190,10 @@
 			}
 		}
 
+		span.wpd-productinfo {
+			font-size: 15px;
+		}
+
 		.wpd-block-product-grid-image {
 			margin-bottom: 0;
 
@@ -194,7 +206,9 @@
 			width: auto;
 			min-width: 140px;
 		}
-
+		.wpd-block-product-grid-text h2 {
+			font-size: 28px;
+		}
 
 		.wpd-block-product-grid-title {
 			@media only screen and (min-width: 600px) {

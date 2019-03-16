@@ -156,3 +156,10 @@ $lightgray: #AAA;
     color: $accent;
   }
 }
+
+hr.wp-block-separator.is-style-default {
+  width: 10%;
+  height: 4px;
+  background: #DDD;
+  border: 0;
+}

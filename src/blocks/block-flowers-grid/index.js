@@ -25,8 +25,8 @@ const {
 const validAlignments = [ 'center', 'wide' ];
 
 // Register the block
-registerBlockType( 'dispensary-blocks/wpd-product-grid', {
-	title: __( 'WP Dispensary Product Grid', 'dispensary-blocks' ),
+registerBlockType( 'dispensary-blocks/wpd-flowers-grid', {
+	title: __( 'WP Dispensary Flowers', 'dispensary-blocks' ),
 	description: __( 'Add a grid or list of customizable products to your page.', 'dispensary-blocks' ),
 	icon: 'grid-view',
 	category: 'dispensary-blocks',
