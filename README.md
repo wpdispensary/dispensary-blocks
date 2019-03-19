@@ -1,7 +1,7 @@
-# WP Dispensary's Product Blocks
+# Product Blocks for WP Dispensary
 
-Display your menu in style with our product blocks for Gutenberg, the new editor in WordPress 5.0+
+Display your menu in style with WP Dispensary's Product Blocks & Gutenberg, the new editor in WordPress 5.0+
 
-**This plugin is under active development**
+#### :warning: this plugin is under active development.
 
-Official release coming soon.
+Download the latest stable release [here](https://www.wordpress.org/plugins/dispensary-blocks)
