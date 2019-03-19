@@ -1,12 +1,12 @@
 <?php
 /**
  * Plugin Name: WP Dispensary's Product Blocks
- * Plugin URI: https://www.wpdispensary.com/product-blocks-for-gutenberg/
+ * Plugin URI:  https://www.wpdispensary.com/product-blocks-for-wp-dispensary/
  * Description: Display your WP Dispensary products with the new Gutenberg editor for WordPress
- * Author: wpdispensary, deviodigital
- * Author URI: https://www.wpdispensary.com/
  * Version: 1.0
- * License: GPL2+
+ * Author:      WP Dispensary
+ * Author URI:  https://www.wpdispensary.com/
+ * License:     GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  *
  * @package DISPENSARY BLOCKS
