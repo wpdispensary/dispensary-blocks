@@ -42,6 +42,12 @@ function dispensary_blocks_loader() {
 	require_once plugin_dir_path( __FILE__ ) . 'src/blocks/block-prerolls-grid/index.php';
 	require_once plugin_dir_path( __FILE__ ) . 'src/blocks/block-topicals-grid/index.php';
 	require_once plugin_dir_path( __FILE__ ) . 'src/blocks/block-growers-grid/index.php';
+
+	// Load Gear block.
+	if ( function_exists( 'run_wpd_gear' ) ) {
+		require_once plugin_dir_path( __FILE__ ) . 'src/blocks/block-gear-grid/index.php';
+	}
+
 }
 add_action( 'plugins_loaded', 'dispensary_blocks_loader' );
 
