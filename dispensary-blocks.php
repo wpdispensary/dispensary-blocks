@@ -48,6 +48,10 @@ function dispensary_blocks_loader() {
 		require_once plugin_dir_path( __FILE__ ) . 'src/blocks/block-gear-grid/index.php';
 	}
 
+	// Load Tinctures block.
+	if ( function_exists( 'run_wpd_tinctures' ) ) {
+		require_once plugin_dir_path( __FILE__ ) . 'src/blocks/block-tinctures-grid/index.php';
+	}
 }
 add_action( 'plugins_loaded', 'dispensary_blocks_loader' );
 

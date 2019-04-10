@@ -8,3 +8,4 @@ import './blocks/block-prerolls-grid/index.js';
 import './blocks/block-topicals-grid/index.js';
 import './blocks/block-growers-grid/index.js';
 import './blocks/block-gear-grid/index.js';
+import './blocks/block-tinctures-grid/index.js';
