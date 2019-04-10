@@ -3,9 +3,9 @@
  * Plugin Name: WP Dispensary's Product Blocks
  * Plugin URI:  https://www.wpdispensary.com/product-blocks-for-wp-dispensary/
  * Description: Display your WP Dispensary products with the new Gutenberg editor for WordPress
- * Version: 1.0
  * Author:      WP Dispensary
  * Author URI:  https://www.wpdispensary.com/
+ * Version:     1.1
  * License:     GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  *

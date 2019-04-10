@@ -4,7 +4,7 @@ Donate link: https://www.wpdispensary.com
 Tags: blocks, editor, gutenberg, dispensary, cannabis
 Requires at least: 5.0
 Tested up to: 5.1
-Stable tag: 1.0
+Stable tag: 1.1
 Requires PHP: 5.2.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -53,6 +53,10 @@ Yes, you will need to have WordPress 5.0 or later installed to take advantage of
 2. Product Block List View
 
 == Changelog ==
+
+= 1.1 =
+* Added new block for [Gear](https://www.wordpress.org/plugins/dispensary-gear)
+* Added new block for [Tinctures](https://www.wordpress.org/plugins/dispensary-tinctures)
 
 = 1.0 =
 * Initial release.
