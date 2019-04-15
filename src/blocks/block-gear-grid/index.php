@@ -114,7 +114,7 @@ function dispensary_blocks_render_block_core_latest_gear( $attributes ) {
 
 					// Display product details.
 					$product_details = array(
-						'thc'         => 'show',
+						'thc'         => '',
 						'thca'        => '',
 						'cbd'         => '',
 						'cba'         => '',
