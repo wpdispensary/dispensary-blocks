@@ -128,6 +128,9 @@ function dispensary_blocks_render_block_core_latest_gear( $attributes ) {
 						'weight'      => 'show'
 					);
 
+					// Filter product details.
+					$product_details = apply_filters( 'wpd_gear_block_product_details', $product_details );
+
 					// Product Details.
 					if ( isset( $attributes['displayProductDetails'] ) && $attributes['displayProductDetails'] ) {
 						$list_items_markup .= get_wpd_product_details( $product_id, $product_details );
