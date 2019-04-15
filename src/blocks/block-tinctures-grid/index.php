@@ -120,12 +120,12 @@ function dispensary_blocks_render_block_core_latest_tinctures( $attributes ) {
 						'cba'         => '',
 						'cbn'         => '',
 						'cbg'         => '',
-						'seed_count'  => 'show',
-						'clone_count' => 'show',
+						'seed_count'  => '',
+						'clone_count' => '',
 						'total_thc'   => 'show',
 						'size'        => 'show',
 						'servings'    => 'show',
-						'weight'      => 'show'
+						'weight'      => ''
 					);
 
 					// Filter product details.
