@@ -166,7 +166,23 @@ function dispensary_blocks_render_block_core_latest_edibles( $attributes ) {
 
 				// Display eCommerce product buttons.
 				if ( function_exists( 'get_wpd_ecommerce_product_buttons' ) ) {
-					$list_items_markup .= get_wpd_ecommerce_product_buttons( $product_id );
+					// Get WPD settings from General tab.
+					$wpdas_general = get_option( 'wpdas_general' );
+
+					// Check if user is required to be logged in to shop.
+					if ( isset( $wpdas_general['wpd_ecommerce_cart_require_login_to_shop'] ) ) {
+						$login_to_shop = $wpdas_general['wpd_ecommerce_cart_require_login_to_shop'];
+					} else {
+						$login_to_shop = NULL;
+					}
+
+					// Check if user is required to login to shop.
+					if ( ! is_user_logged_in() && 'on' == $login_to_shop ) {
+						// Do nothing.
+					} else {
+						// Add buttons to the various shortcodes, archives, and widgets..
+						$list_items_markup .= get_wpd_ecommerce_product_buttons( $product_id );
+					}
 				}
 
 			// Wrap the text content
