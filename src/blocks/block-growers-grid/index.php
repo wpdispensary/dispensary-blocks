@@ -114,7 +114,7 @@ function dispensary_blocks_render_block_core_latest_growers( $attributes ) {
 
 					// Display product details.
 					$product_details = array(
-						'thc'         => 'show',
+						'thc'         => '',
 						'thca'        => '',
 						'cbd'         => '',
 						'cba'         => '',
@@ -122,10 +122,10 @@ function dispensary_blocks_render_block_core_latest_growers( $attributes ) {
 						'cbg'         => '',
 						'seed_count'  => 'show',
 						'clone_count' => 'show',
-						'total_thc'   => 'show',
-						'size'        => 'show',
-						'servings'    => 'show',
-						'weight'      => 'show'
+						'total_thc'   => '',
+						'size'        => '',
+						'servings'    => '',
+						'weight'      => ''
 					);
 
 					// Filter product details.
