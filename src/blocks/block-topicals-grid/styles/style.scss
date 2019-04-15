@@ -26,18 +26,34 @@
 
 	.is-grid.columns-2 {
 		grid-template-columns: 1fr 1fr;
+
+		@media only screen and (max-width: 600px) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	.is-grid.columns-3 {
 		grid-template-columns: 1fr 1fr 1fr;
+
+		@media only screen and (max-width: 600px) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	.is-grid.columns-4 {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
+
+		@media only screen and (max-width: 600px) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	.is-grid.columns-5 {
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+		@media only screen and (max-width: 600px) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	.is-grid {
