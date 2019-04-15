@@ -120,11 +120,11 @@ function dispensary_blocks_render_block_core_latest_prerolls( $attributes ) {
 						'cba'         => '',
 						'cbn'         => '',
 						'cbg'         => '',
-						'seed_count'  => 'show',
-						'clone_count' => 'show',
-						'total_thc'   => 'show',
-						'size'        => 'show',
-						'servings'    => 'show',
+						'seed_count'  => '',
+						'clone_count' => '',
+						'total_thc'   => '',
+						'size'        => '',
+						'servings'    => '',
 						'weight'      => 'show'
 					);
 
