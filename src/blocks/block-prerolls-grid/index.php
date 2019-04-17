@@ -106,9 +106,13 @@ function dispensary_blocks_render_block_core_latest_prerolls( $attributes ) {
 
 					// Product Price.
 					if ( isset( $attributes['displayProductPrice'] ) && $attributes['displayProductPrice'] ) {
+						// Generate display price HTML.
+						$display_price = get_wpd_all_prices_simple( $product_id, TRUE );
+
+						// Display filtered product price.
 						$list_items_markup .= sprintf(
 							'<div class="wpd-block-product-grid-author">%1$s</div>',
-							get_wpd_all_prices_simple( $product_id, TRUE )
+							apply_filters( 'wpd_blocks_product_price', $display_price )
 						);
 					}
 
