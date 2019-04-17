@@ -4,7 +4,7 @@ Donate link: https://www.wpdispensary.com
 Tags: blocks, editor, gutenberg, dispensary, cannabis
 Requires at least: 5.0
 Tested up to: 5.1
-Stable tag: 1.1
+Stable tag: 1.2
 Requires PHP: 5.2.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -53,6 +53,13 @@ Yes, you will need to have WordPress 5.0 or later installed to take advantage of
 2. Product Block List View
 
 == Changelog ==
+
+= 1.2 =
+* Added product details filters to each block type
+* Added `wpd_blocks_product_price` filter to each block type
+* Hide eCommerce buttons based on the eCommerce add-on's 'require login to shop' setting
+* Updated default product details settings for Pre-rolls, Growers, Gear, Tinctures product types
+* Updated CSS to make the blocks re-size to 1 column per row on smaller browser sizes
 
 = 1.1 =
 * Added new block for [Gear](https://www.wordpress.org/plugins/dispensary-gear)
