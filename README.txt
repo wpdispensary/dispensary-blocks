@@ -3,8 +3,8 @@ Contributors: wpdispensary, deviodigital
 Donate link: https://www.wpdispensary.com
 Tags: blocks, editor, gutenberg, dispensary, cannabis
 Requires at least: 5.0
-Tested up to: 5.1
-Stable tag: 1.2
+Tested up to: 5.2
+Stable tag: 1.2.1
 Requires PHP: 5.2.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -53,6 +53,10 @@ Yes, you will need to have WordPress 5.0 or later installed to take advantage of
 2. Product Block List View
 
 == Changelog ==
+
+= 1.2.1 =
+* Bugfix `tar` dependency version update to fix vulnerability found in older versions
+* Updated `create-guten-block` version from 1.9.3 to 1.13.0
 
 = 1.2 =
 * Added product details filters to each block type
