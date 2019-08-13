@@ -5,7 +5,7 @@
  * Description: Display your WP Dispensary products in style with the new Gutenberg editor for WordPress
  * Author:      WP Dispensary
  * Author URI:  https://www.wpdispensary.com/
- * Version:     1.2.1
+ * Version:     1.3
  * License:     GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  *

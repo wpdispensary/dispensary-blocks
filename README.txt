@@ -3,8 +3,8 @@ Contributors: wpdispensary, deviodigital
 Donate link: https://www.wpdispensary.com
 Tags: blocks, editor, gutenberg, dispensary, cannabis
 Requires at least: 5.0
-Tested up to: 5.2
-Stable tag: 1.2.1
+Tested up to: 5.2.2
+Stable tag: 1.3
 Requires PHP: 5.2.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -53,6 +53,16 @@ Yes, you will need to have WordPress 5.0 or later installed to take advantage of
 2. Product Block List View
 
 == Changelog ==
+
+= 1.3 =
+* Bugfix `lodash` dependency version update to fix vulnerability found in older versions
+* Bugfix `lodash.mergewith` dependency version update to fix vulnerability found in older versions
+* Bugfix `lodash-es` dependency version update to fix vulnerability found in older versions
+* Bugfix `mem` dependency version update to fix vulnerability found in older versions
+* Bugfix `eslint` dependency version update to fix vulnerability found in older versions
+* Bugfix `braces` dependency version update to fix vulnerability found in older versions
+* Bugfix `jsyaml` dependency version update to fix vulnerability found in older versions
+* Bugfix `fstream` dependency version update to fix vulnerability found in older versions
 
 = 1.2.1 =
 * Bugfix `tar` dependency version update to fix vulnerability found in older versions
