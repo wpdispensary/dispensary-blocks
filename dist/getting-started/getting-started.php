@@ -96,7 +96,7 @@ function dispensary_blocks_getting_started_page() {
 		add_query_arg(
 			array(
 				'action' => 'install-theme',
-				'theme' => 'dispensary-blocks'
+				'theme'  => 'dispensary-blocks'
 			),
 			admin_url( 'update.php' )
 		),
