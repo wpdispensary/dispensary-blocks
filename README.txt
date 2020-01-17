@@ -3,8 +3,8 @@ Contributors: wpdispensary, deviodigital
 Donate link: https://www.wpdispensary.com
 Tags: blocks, editor, gutenberg, dispensary, cannabis
 Requires at least: 5.0
-Tested up to: 5.2.2
-Stable tag: 1.3
+Tested up to: 5.3.2
+Stable tag: 1.3.1
 Requires PHP: 5.2.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -54,30 +54,34 @@ Yes, you will need to have WordPress 5.0 or later installed to take advantage of
 
 == Changelog ==
 
+= 1.3.1 =
+*   Bugfix `npm` dependency version to fix vulnerability found in older versions
+*   General code cleanup throughout multiple files
+
 = 1.3 =
-* Bugfix `lodash` dependency version update to fix vulnerability found in older versions
-* Bugfix `lodash.mergewith` dependency version update to fix vulnerability found in older versions
-* Bugfix `lodash-es` dependency version update to fix vulnerability found in older versions
-* Bugfix `mem` dependency version update to fix vulnerability found in older versions
-* Bugfix `eslint` dependency version update to fix vulnerability found in older versions
-* Bugfix `braces` dependency version update to fix vulnerability found in older versions
-* Bugfix `jsyaml` dependency version update to fix vulnerability found in older versions
-* Bugfix `fstream` dependency version update to fix vulnerability found in older versions
+*   Bugfix `lodash` dependency version update to fix vulnerability found in older versions
+*   Bugfix `lodash.mergewith` dependency version update to fix vulnerability found in older versions
+*   Bugfix `lodash-es` dependency version update to fix vulnerability found in older versions
+*   Bugfix `mem` dependency version update to fix vulnerability found in older versions
+*   Bugfix `eslint` dependency version update to fix vulnerability found in older versions
+*   Bugfix `braces` dependency version update to fix vulnerability found in older versions
+*   Bugfix `jsyaml` dependency version update to fix vulnerability found in older versions
+*   Bugfix `fstream` dependency version update to fix vulnerability found in older versions
 
 = 1.2.1 =
-* Bugfix `tar` dependency version update to fix vulnerability found in older versions
-* Updated `create-guten-block` version from 1.9.3 to 1.13.0
+*   Bugfix `tar` dependency version update to fix vulnerability found in older versions
+*   Updated `create-guten-block` version from 1.9.3 to 1.13.0
 
 = 1.2 =
-* Added product details filters to each block type
-* Added `wpd_blocks_product_price` filter to each block type
-* Hide eCommerce buttons based on the eCommerce add-on's 'require login to shop' setting
-* Updated default product details settings for Pre-rolls, Growers, Gear, Tinctures product types
-* Updated CSS to make the blocks re-size to 1 column per row on smaller browser sizes
+*   Added product details filters to each block type
+*   Added `wpd_blocks_product_price` filter to each block type
+*   Hide eCommerce buttons based on the eCommerce add-on's 'require login to shop' setting
+*   Updated default product details settings for Pre-rolls, Growers, Gear, Tinctures product types
+*   Updated CSS to make the blocks re-size to 1 column per row on smaller browser sizes
 
 = 1.1 =
-* Added new block for [Gear](https://www.wordpress.org/plugins/dispensary-gear)
-* Added new block for [Tinctures](https://www.wordpress.org/plugins/dispensary-tinctures)
+*   Added new block for [Gear](https://www.wordpress.org/plugins/dispensary-gear)
+*   Added new block for [Tinctures](https://www.wordpress.org/plugins/dispensary-tinctures)
 
 = 1.0 =
-* Initial release.
+*   Initial release.
