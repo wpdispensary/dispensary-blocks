@@ -106,7 +106,7 @@ function dispensary_blocks_getting_started_page() {
 	<div class="wrap wpd-getting-started">
 		<div class="intro-wrap">
 			<div class="intro">
-				<a href="<?php echo esc_url('https://www.wpdispensary.com/'); ?>"><img class="dispensary-logo" src="<?php echo esc_url( plugins_url( 'logo.png', __FILE__ ) ); ?>" alt="<?php esc_html_e( 'Visit WP Dispensary', 'dispensary-blocks' ); ?>" /></a>
+				<a href="<?php echo esc_url( 'https://www.wpdispensary.com/' ); ?>"><img class="dispensary-logo" src="<?php echo esc_url( plugins_url( 'logo.png', __FILE__ ) ); ?>" alt="<?php esc_html_e( 'Visit WP Dispensary', 'dispensary-blocks' ); ?>" /></a>
 				<h3><?php printf( esc_html__( 'Getting started with', 'dispensary-blocks' ) ); ?> <strong><?php printf( esc_html__( 'Dispensary Blocks', 'dispensary-blocks' ) ); ?></strong></h3>
 			</div>
 		</div>
