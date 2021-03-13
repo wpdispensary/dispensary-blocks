@@ -137,7 +137,7 @@ function dispensary_blocks_render_block_core_latest_concentrates( $attributes ) 
 
 					// Product Details.
 					if ( isset( $attributes['displayProductDetails'] ) && $attributes['displayProductDetails'] ) {
-						$list_items_markup .= get_wpd_product_details( $product_id, $product_details );
+						$list_items_markup .= get_wpd_product_details( $product_id, $product_details, 'span' );
 					}
 
 					//var_dump( wpd_product_details( $product_id, $product_details ) );
